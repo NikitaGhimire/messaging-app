@@ -12,7 +12,10 @@ const postRoutes = require("./src/routes/postRoutes");
 const app = express();
 
 // Middleware
-app.use(cors({ origin: "messaging-app-ebon-two.vercel.app" })); // Enable CORS for all requests
+app.use(cors({ origin: "https://messaging-app-ebon-two.vercel.app",
+  methods: "GET,POST,PUT,DELETE",
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true })); // Enable CORS for all requests
 app.use(express.json()); // Parse incoming JSON requests
 
 // Serve static files from the "src/uploads" folder
