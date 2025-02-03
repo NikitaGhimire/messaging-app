@@ -971,7 +971,7 @@ const Home = () => {
                         </div>
                     </>
                 )} </>
-            ):(<p> Navigate to login </p>)}
+            ):(<p> Try logging in <a href="/login"> Login </a> </p>)}
 
             
         </div>
